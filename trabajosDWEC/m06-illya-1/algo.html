@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function simple(){
+    var num1 = 1
+    var res
+    var salida = document.getElementById("salida") 
+        res = num1 + num1
+      salida.innerHTML = res
+     
+    }
+    function compleja(){
+    var weapons = ["Colt M4","AK47","RPK"]
+    var salida = document.getElementById("salida") 
+    var savePoint = " "
+    weapons.forEach(element => savePoint += element + "<br>")
+    salida.innerHTML= savePoint
+    
+    }</script>
+<body class="fondo">
+    <div>
+    <button onclick="simple()">
+        Estructura de datos simples
+    </button>
+    <button onclick="compleja()">
+    Estrucutra Compleja
+    </button> 
+    <h2 id="salida">
+    
+    </h2>
+    </div>
+  </body>
+</html>
