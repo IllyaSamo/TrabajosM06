@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>
+        callback anonimo
+        </button>
+        <h3 id="prueba1">
+        </h3>
+        <button onclick="conNombre(callback2)">
+        callback con nombre
+        </button>
+        <h3 id="prueba2">
+        </h3>
+        <button onclick="callParams (funcionLamada('Profesor'))">
+        recibir parametros
+        </button>
+        <h3 id="prueba3">
+        </h3>
+        <button onclick="bucles(llamarBucle(0))">
+        bucle
+        </button>
+        <h3 id="prueba4">
+        </h3>
+        <button onclick="desicion(llamarDeciciones(false))">
+        If else
+        </button>
+        <h3 id="prueba5">
+        </h3>
+        <script>
+
+anonimo(function(){
+	document.getElementById("prueba1").innerHTML=("Esto es un callback anonimo")
+})
+function anonimo(callback1){
+callback1()
+}
+///////////////////////////////////////
+function callback2(){
+        document.getElementById("prueba2").innerHTML=("Esto es un callback con nombre")
+    }
+    
+function conNombre(callback2){
+    callback2()
+}
+/////////////////////////////////////////////
+function callParams (callback3) {
+  callback3()
+}
+
+
+function funcionLamada(nombre) {
+	
+	document.getElementById("prueba3").innerHTML = ("hola " + nombre);
+}
+///////////////////////////////////////////////////////////////////////////
+function bucles(callback4){
+callback4()
+}
+function llamarBucle(numero){
+
+	while (numero <= 5){
+  	document.getElementById("prueba4").innerHTML = (numero);
+    numero++
+  }
+}
+//////////////////////////////////////////////////////
+function desicion(callback5){
+callback5()
+}
+function llamarDeciciones(condicion){
+	if(condicion){
+  document.getElementById("prueba5").innerHTML = ("Se cumple la condicion")
+  }else{
+  document.getElementById("prueba5").innerHTML = ("No se cumple la condicion")
+  }
+}
+
+
+        </script>
+    
+</body>
+</html>
